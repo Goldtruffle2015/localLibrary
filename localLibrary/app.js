@@ -11,7 +11,7 @@ var catalogRouter = require('./routes/catalog');  // Import routes for "catalog"
 // Set up mongoose connection
 var mongoose = require('mongoose');
 var mongoDB = "mongodb+srv://Goldtruffle2015:BULRLYopnIXfq8YI@cluster0.ay7vc.gcp.mongodb.net/localLibrary?retryWrites=true&w=majority";
-mongoose.connect(mongoDB, { useNewUrlParser: true });
+mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true });
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
